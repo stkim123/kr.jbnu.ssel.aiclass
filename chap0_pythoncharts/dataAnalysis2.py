@@ -21,32 +21,20 @@ plt.show()
 
 data=[]
 
-for i in range(len(df)):
-    data.append([])
-    for j in range(len(df)):
-        data[i].append([])
-        data[i].append(0)
+# data[][] 배열초기화
 
-        data[i][0]=df.name[i]
-        data[i][1]=df.hourly_wage[i]
 
 def sum(keyword):
-    sum=0
+# 시급의 합
 
-    for i in range(len(df)):
-        if data[i][0] == keyword:
-            sum+=data[i][1]
 
-    return sum
+
 
 def count(keyword):
-    count =0
+# Count():
+# 각 회사의 점포 수
 
-    for i in range(len(df)):
-        if data[i][0] == keyword:
-            count += 1
 
-    return count
 
 def mean(sum, count):
     return sum/count
@@ -56,8 +44,9 @@ mean_0711 = mean(sum("07-11"),count("07-11"))
 mean_CU = mean(sum("CU"),count("CU"))
 mean_gs25 = mean(sum("gs25"),count("gs25"))
 
-y = [mean_total,mean_0711,mean_CU,mean_gs25]
-x = ['전체평균','07-11','CU','gs25']
+# X축 Y 축 설정
+# y =
+# x =
 
 plt.bar(x,y)
 plt.ylim(5500,6000)
