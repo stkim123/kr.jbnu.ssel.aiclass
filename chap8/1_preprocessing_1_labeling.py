@@ -27,7 +27,7 @@ np.random.seed(0)
 df = df.reindex(np.random.permutation(df.index))
 df.to_csv('./data/movie_review.csv', index=False)
 
-# import pandas as pd
+import pandas as pd
 df = pd.DataFrame()
 df = pd.read_csv('./data/movie_review.csv')
 print(df.head())

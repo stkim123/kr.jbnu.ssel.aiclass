@@ -5,8 +5,8 @@ from sklearn.feature_extraction.text import HashingVectorizer
 from sklearn.linear_model import SGDClassifier
 import pickle
 import os
-from sent_analysis2.mylib.progbar import ProgBar
-from sent_analysis2.mylib.sgd_tokenizer import sgd_tokenizer
+from chap8.mylib.progbar import ProgBar
+from chap8.mylib.sgd_tokenizer import sgd_tokenizer
 
 def stream_docs(path):
     with open(path, 'r', encoding='UTF8') as f:

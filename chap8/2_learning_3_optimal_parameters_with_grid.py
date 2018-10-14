@@ -13,7 +13,7 @@ from sklearn.linear_model import LogisticRegression
 import datetime
 from time import time
 
-from sent_analysis2.mylib.tokenizer import tokenizer, tokenizer_porter
+from chap8.mylib.tokenizer import tokenizer, tokenizer_porter
 from nltk.corpus import stopwords
 
 if __name__ == "__main__" :
@@ -47,6 +47,8 @@ if __name__ == "__main__" :
 
     clf=gs_lr_tfidf.best_estimator_
     print('테스트 정확도: %.3f' % clf.score(x_test, y_test))
+
+    stime = time()
     y_pred = lr_tfidf.predict(x_test)
     print('테스트 종료: 소요시간 [%d]초' % (time() - stime))
     print('정확도: %.3f' % accuracy_score(y_test, y_pred))
@@ -58,4 +60,3 @@ if __name__ == "__main__" :
 
     pickle.dump(clf, open(os.path.join(dest, 'best_classifier.pkl'), 'wb'), protocol=4)
     print('머신러닝 데이터 저장 완료')
-

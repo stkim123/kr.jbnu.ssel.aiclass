@@ -18,3 +18,4 @@ print(bag.toarray())
 tfidf = TfidfTransformer()
 np.set_printoptions(precision=2)
 print(tfidf.fit_transform(count.fit_transform(docs)).toarray())
+

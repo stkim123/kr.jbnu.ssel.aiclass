@@ -6,8 +6,7 @@ import pickle
 import os
 from time import time
 import pandas as pd
-from sent_analysis2.mylib.tokenizer import tokenizer, tokenizer_porter
-
+from chap8.mylib.tokenizer import tokenizer, tokenizer_porter
 
 df = pd.read_csv('./data/refined_movie_review.csv')
 x_train = df.loc[:35000, 'review'].values
